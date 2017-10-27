@@ -1,0 +1,63 @@
+@import '../common/normalize.css';
+@import '../common/variables.css';
+@import '../common/table.css';
+@import '../common/search.css';
+@import '../common/container.css';
+
+.list_navigation{
+    
+    & th {
+        text-align: center;
+    }
+    & .head_file {
+        width: 13%;
+        box-sizing: content-box;
+    }
+    & .head_url {
+        width: 52%;
+        box-sizing: content-box;
+    }
+    & .head_file_size {
+        width: 10%;
+        box-sizing: content-box;
+        
+    }
+    & .versionId {
+        width: 8%;
+        box-sizing: content-box;
+        text-align: center;
+    }
+    & .inner_table {
+        width: 75%;
+        box-sizing: content-box;
+    }
+    & .targetOS { 
+        width: 7%; 
+        box-sizing: content-box;
+        text-align: center;
+    }
+    & .time {
+        width: 10%; 
+        box-sizing: content-box; 
+        text-align: center;
+    }
+    & .file { 
+        width: calc(13/75*100)%; 
+        box-sizing: content-box;  
+        text-align: center;
+    }
+    & .url { 
+        width: calc(52/75*100)%; 
+        box-sizing: content-box;  
+    }
+    & .file_size {
+        width: calc(10/75*100)%; 
+        box-sizing: content-box; 
+        text-align: center;
+    }
+    & table table tr{
+        width:100%;
+    }
+   
+}
+

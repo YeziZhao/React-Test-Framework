@@ -1,0 +1,17 @@
+ 
+.search_bar {
+        // height: 20px;
+        line-height: 20px;
+        & .service_container, & .program_container {
+            display: inline-block;
+            width: 50%;
+            margin-top: 10px;
+            & > div {
+                display: inline-block;
+            }
+        }      
+        &  select {
+            display: inline-block;
+            margin-left: 10px;
+        }
+    }

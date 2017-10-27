@@ -1,0 +1,131 @@
+:root {
+    /*global color*/
+    --black: #000;
+    --black-light: #333;
+    --grey: #a6a6a6;
+    --grey-light: #ccc;
+    --grey-lighter: #f8f8f8;
+    --white: #fff;
+    --green: #3eac40;
+    --blue: #428bca;
+    --grey-shadow: rgba(0, 0, 0,.075);
+    --red: #ff0000;
+    --orange: #ff9933;
+
+    /* text color*/
+    --text-color: var(--black-light);
+    --text-link-color: var(--green);
+    --text-highlighted-color: var(--green);
+
+    /* font-size */
+    --font-lg: 20px; /*use for page title*/
+    --font-md: 16px; /*use for subtitle*/
+    --font-xs: 14px; /*use for content*/
+
+    /* dash service state color*/
+    --normal-color: var(--green);
+    --part-error-color: var(--orange);
+    --all-error-color: var(--red);
+
+    /*padding and margin*/
+    --padding-lg: 20px;
+    --padding-md: 10px;
+    --padding-xs: 5px;
+
+    --margin-lg: 20px;
+    --margin-md: 10px;
+    --margin-xs: 5px;
+
+    /* table */
+    --table-title-color: var(--white);
+    --table-title-bg: var(--grey);
+    --table-border: var(--grey-light);
+    --table-content-color: var(--black-light);
+    --table-content-bg: var(--white);
+
+    /* button */
+    --btn-border: var(--grey-light);
+
+    --btn-default-color: var(--black-light);
+    --btn-default-bg: var(--white);
+
+    --btn-disabled-color: var(--grey-light);
+    --btn-disabled-bg: var(--grey-lighter);
+
+    --btn-green-color: var(--white);
+    --btn-green-bg: var(--green);
+
+    --btn-blue-color: var(--white);
+    --btn-blue-bg: var(--blue);
+
+    /* form */
+    --label-title-color: var(--black);
+    --label-color: var(--black-light);
+    --input-text-color: var(--black-light);
+    --input-border-color: var(--grey-light);
+    --input-border-shadow: var(--black-shadow);
+
+    /* pagination */
+    --pagi-color: var(--black-light);
+    --pagi-border: var(--grey-light);
+    --pagi-hover-color: var(--green);
+    --pagi-current-color: var(--green);
+    --pagi-disabled-bg: var(--white);
+    --pagi-disabled-color: var(--grey-light);
+
+    /* tab */
+    --tab-color: var(--black-light);
+    --tab-border: var(--grey-light);
+
+    /* popup */
+    --popupLayout-bg-color: rgba(0, 0, 0, .5);
+    --popup-title-bg-color: var(--green);
+    --popup-title-color: var(--white);
+    --popup-bg-color: var(--white);
+    --popup-text-color: var(--black-light);
+    --popup-border: 1px solid var(--grey);
+
+    /* button for default*/
+    --default-btn {
+        padding: 0 var(--padding-md);
+        height: 30px;
+        font-size: var(--font-xs);
+        color: var(--btn-default-color);
+        border-radius: 5px;
+        border: 1px solid var(--btn-border);
+        background: var(--btn-default-bg);
+        outline: 0;
+        cursor: pointer;
+    }
+    
+    /* button wider */
+    --wider-btn {
+        padding: 0 var(--padding-lg);
+        height: 30px;
+        font-size: var(--font-xs);
+        color: var(--btn-default-color);
+        border-radius: 3px;
+        border: 1px solid var(--btn-border);
+        background: var(--btn-default-bg);
+        outline: 0;
+        cursor: pointer;
+    }
+
+    /* select input*/
+    --select {
+        padding: 0 var(--padding-md);
+        height: 30px;
+        border: 1px solid var(--input-border-color);
+        border-radius: 3px;
+    }
+
+    /* text input*/
+    --text-input {
+        height: 28px;
+        color: var(--input-text-color);
+        padding: 0 var(--padding-xs);
+        border-radius: 3px;
+        border: 1px solid var(--input-border-color);
+        box-shadow: inset 0 1px 1px var(--input-border-shadow);
+    }
+}

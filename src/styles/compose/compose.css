@@ -1,0 +1,72 @@
+@import '../common/variables.css';
+
+.contrainer, .container {
+    & .title {
+        font-size: var(--font-lg); 
+        margin: 0; 
+        border: 1px solid var(--grey-light);
+        border-bottom: none;
+        padding: 0 20px;
+        height: 50px;
+        line-height: 50px;
+        
+    }
+    & .content {
+        font-size: var(--font-xs);
+        padding: 0 20px 20px;
+        color: var(--black-light);
+        border: 1px solid #ccc;
+        & > div{
+            margin-top: 10px;
+        }
+        & .lab_name{
+            float: left;
+            display: inline-block;
+            width: 124px;
+        }
+        & > select,& > input {
+            display: inline-block;
+           
+        }
+        & .lab_notice {
+            padding-left: 124px;
+            color: #aaa;
+            margin-top:5px;
+            color: red;
+            & .appNum {
+                font-weight: bold;
+            }
+        }
+        & .version_contrainer {}
+        & .lab_name {}
+        & select {
+            @apply --select;
+        }
+        & input {
+            @apply --text-input;
+            padding: 0 10px;
+            width: 210px;
+        }
+        & input.file{
+            border: none;
+            padding: 0;
+            
+        }
+        & .description{
+            @apply --text-input;
+            padding: 0 10px;
+            resize: none;
+            height: auto;
+        }
+    }
+    & .nav{
+        text-align: center;
+        margin: 20px 0;
+        & > button {
+            @apply --default-btn;
+            background-color: var(--green);
+            color: var(--white);
+           
+        }
+    }
+}
