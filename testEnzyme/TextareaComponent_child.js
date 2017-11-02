@@ -12,8 +12,9 @@ const defaultProps = {
 function TextareaComponent({ title }) {
     return(
         <div>
-            <div data-name="haveChild">
-                <ChildTextareaComponent title={title}/>
+            <div id='idChild' className='cssChild' data-name="haveChild">
+                <div>{title}</div>
+                <ChildTextareaComponent title='childTitle'/>
             </div>
         </div>
     );

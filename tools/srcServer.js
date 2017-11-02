@@ -24,7 +24,7 @@ app.use(webpackDevMiddlewareInstance);
 
 app.use(require('webpack-hot-middleware')(compiler));
 
-app.use('/api/*', (req, res) => {
+app.use('/mockjsdata/1/*', (req, res) => {
     let proxiedUrl = req.baseUrl;
     const url = require('url');
     let url_parts = url.parse(req.url, true);
@@ -33,7 +33,7 @@ app.use('/api/*', (req, res) => {
     }
     req.url = proxiedUrl;
     apiProxy.web(req, res, {
-        target: 'http://10.34.136.69:8080/mockjsdata/1', 
+        target: 'http://10.34.136.69:8080', 
         // target: {
         //     host: 'localhost',
         //     port: 8080

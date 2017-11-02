@@ -20,9 +20,7 @@ export function getServices() {
             data: services
         }) => {
             if (code === 'SUCCESS') {
-                dispatch(getServicesSuccess({
-                    services
-                }));
+                dispatch(getServicesSuccess(services));
             }
             else {
                 alert(message);
@@ -30,9 +28,7 @@ export function getServices() {
         });
     };
 }
-function getServicesSuccess({
-    services
-}) {
+export function getServicesSuccess(services) {
     return {
         type: types.GET_SERVICES,
         services

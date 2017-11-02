@@ -30,7 +30,7 @@ function createAppVersion(data = version) {
         headers: {
             'Content-Type': 'multipart/form-data'
         },
-        url: `${configs.domain}/api/createAppVersion`,
+        url: '/mockjsdata/1/api/services',
         data: formData
     })
     .then((response) => {

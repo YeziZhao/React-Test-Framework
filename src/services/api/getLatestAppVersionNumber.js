@@ -9,7 +9,7 @@ function getLatestAppVersionNumber({
 }) {
     return axios({
         method: 'GET',
-        url: `${configs.domain}/api/getLatestAppVersionNumber?serviceId=${serviceId}&applicationId=${applicationId}&osPlatformId=${osPlatformId}`
+        url: '/mockjsdata/1/api/services'
     })
     .then((response) => {
         return response.data;

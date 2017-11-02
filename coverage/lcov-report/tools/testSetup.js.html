@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for tools\testSetup.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">tools/</a> testSetup.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">85.71% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>18/21</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>2/2</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/3</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>18/18</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">82×</span>
+<span class="cline-any cline-yes">62×</span>
+<span class="cline-any cline-yes">62×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// This file is written in ES5 since it's not transpiled by Babel.
+// This file does the following:
+// 1. Sets Node environment variable
+// 2. Register babel for transpiling our code for testing
+// 3. Disables Webpack-specific features that Mocha doesn't understand.
+// 4. Requires isdom so we can test via an in-memory DOM in Node
+// 5. Sets up global vars that mimic a browser.
+&nbsp;
+/* eslint-disable no-var*/
+&nbsp;
+/* This setting assures the .babelrc dev config (which includes
+   hot module reloading code) doesn't apply for tests.
+   But also, we don't want to set it to production here for
+   two reasons:
+   1. You won't see any PropType validation warnings when
+   code is running in prod mode.
+   2. Tests will not display detailed error messages
+   when running against production version code
+*/
+process.env.NODE_ENV = 'test';
+&nbsp;
+// Register babel so that it will transpile ES6 to ES5
+// before our tests run.
+require('babel-register')();
+&nbsp;
+// Disable webpack-specific features for tests since
+// Mocha doesn't know what to do with them.
+require.extensions['.css'] = <span class="fstat-no" title="function not covered" >function () {<span class="cstat-no" title="statement not covered" ></span>return null;}</span>;
+require.extensions['.png'] = <span class="fstat-no" title="function not covered" >function () {<span class="cstat-no" title="statement not covered" ></span>return null;}</span>;
+require.extensions['.jpg'] = <span class="fstat-no" title="function not covered" >function () {<span class="cstat-no" title="statement not covered" ></span>return null;}</span>;
+&nbsp;
+// Configure JSDOM and set global variables
+// to simulate a browser environment for test.
+var jsdom = require('jsdom').jsdom;
+&nbsp;
+var exposedProperties = ['window', 'navigator', 'document'];
+&nbsp;
+global.document = jsdom('&lt;html&gt;&lt;body&gt;&lt;div id="app"&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;', {
+    url: 'http://10.34.136.69:8080',
+});
+global.window = document.defaultView;
+global.navigator = window.navigator;
+global.XMLHttpRequest = window.XMLHttpRequest;
+global.HTMLElement = window.HTMLElement;
+// window.localStorage = new MockStorage();
+// window.sessionStorage = new MockStorage();
+global.sinon = require('sinon'); 
+&nbsp;
+Object.keys(document.defaultView).forEach((property) =&gt; {
+    if (typeof global[property] === 'undefined') {
+        exposedProperties.push(property);
+        global[property] = document.defaultView[property];
+    }
+});
+&nbsp;
+global.navigator = {
+    userAgent: 'node.js'
+};</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Nov 01 2017 15:57:46 GMT+0800 (中国标准时间)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+  -t 2000000 
+  --compilers js:babel-register 
+  --recursive 
+  --reporter mochawesome tools/testSetup.js  test/**/*.js 

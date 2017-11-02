@@ -16,7 +16,7 @@ export default function configureStore(initialState) {
         initialState,
         composeEnhancers(
             applyMiddleware(
-                thunk, logger, reduxImmutableStoreInvariant()
+                thunk, reduxImmutableStoreInvariant()
             )
         )
     );

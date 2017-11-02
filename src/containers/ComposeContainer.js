@@ -33,7 +33,14 @@ class ComposeContainer extends React.Component {
         this.handleChangeVersionFile = this.handleChangeVersionFile.bind(this);
         this.handleChangeDescription = this.handleChangeDescription.bind(this);
         this.handleClickUpload = this.handleClickUpload.bind(this);
+        
+    }
+    componentDidMount() {
+        console.log("----------","componentDidMount");
         this.props.actions.initCompose();
+    }
+    componentWillReceiveProps(preProp,Prop) {
+        console.log("----------","compontWillReceiveProps");
     }
     handleChangeService(e) {
         const serviceId = Number(e.target.value);

@@ -4,7 +4,7 @@ import configs from '../configs';
 function getServices() {
     return axios({
         method: 'GET',
-        url: `${configs.domain}/api/common/getServices`
+        url: '/mockjsdata/1/api/services'
     })
     .then((response) => {
         return response.data;

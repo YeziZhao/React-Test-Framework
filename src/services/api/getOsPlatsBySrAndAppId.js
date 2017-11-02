@@ -8,7 +8,7 @@ function getOsPlatsBySrAndAppId({
 }) {
     return axios({
         method: 'GET',
-        url: `${configs.domain}/api/common/getOsPlatsBySrAndAppId/${serviceId}/${applicationId}`
+        url: `/mockjsdata/1/api/services`
     })
     .then((response) => {
         return response.data;

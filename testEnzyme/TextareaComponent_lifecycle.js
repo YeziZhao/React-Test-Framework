@@ -12,6 +12,7 @@ const defaultProps = {
 class TextareaComponent extends React.Component {
     constructor(props) {
         super(props);
+        this.state = { name: 'foo' };
     }
     componentDidMount () {
         console.log('*******componentDidMount********');
@@ -20,10 +21,12 @@ class TextareaComponent extends React.Component {
         console.log('*******componentDidUpdate********');
     }
     render() {
-        const title = this.props.title;
+        const { title } = this.props;
+        const { name } = this.state;
         return(
             <div>
-                <textarea name="title" rows="3" cols="102" placeholder="please enter value" value={title} />
+                <textarea value={title}></textarea>
+                <span>{name}</span>
             </div>
         );
     }

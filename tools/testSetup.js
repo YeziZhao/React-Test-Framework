@@ -36,7 +36,7 @@ var jsdom = require('jsdom').jsdom;
 var exposedProperties = ['window', 'navigator', 'document'];
 
 global.document = jsdom('<html><body><div id="app"></div></body></html>', {
-    url: 'http://localhost:8080',
+    url: 'http://10.34.136.69:8080',
 });
 global.window = document.defaultView;
 global.navigator = window.navigator;

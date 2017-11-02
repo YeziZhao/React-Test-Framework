@@ -7,7 +7,7 @@ function getAppsBySrId({
 }) {
     return axios({
         method: 'GET',
-        url: `${configs.domain}/api/common/getAppsBySrId/${serviceId}`
+        url: '/mockjsdata/1/api/services'
     })
     .then((response) => {
         return response.data;
