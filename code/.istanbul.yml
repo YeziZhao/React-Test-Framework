@@ -1,0 +1,21 @@
+instrumentation:
+  root: F:\study_code\test-framework\  # 执行的根目录
+  extensions:
+    - .js   # 检查覆盖率的文件扩张名
+  excludes: ['**/node_modules/**']
+
+reporting:
+  print: summary
+  reports: [lcov, text, html, text-summary] # 生成报告的格式： 
+  dir: ./coverage   # 生成报告保存的目录
+  watermarks:       # 在不同覆盖率下会显示使用不同颜色（60-95使用该颜色）
+    statements: [60, 80]
+    branches: [60, 80]
+    lines: [60, 80]
+    functions: [60, 80]
+check:
+  global:
+    statements: 60
+    branches: 60
+    lines: 60
+    functions: 60
