@@ -1,8 +1,5 @@
-# React-Test-Framework
-mocha+enzyme+chai+sonarqube+jenkins
-
-# code
-包含了测试react的整体框架调研结果
-
-# 分析：
-主要是对测试的一个介绍，以及前端自动化集成测试框架jenkins + sonarqube
+* [jenkins-SonarQuebe](./分析/1.0测试简介.md)
+    * [1.1SonarQuebe](./分析/1.1Sonar.md)
+    * [1.2Coverage](./分析/1.3Sonar_Coverage.md)
+    * [1.3Jenkins](./分析/1.2Jenkins.md)
+    * [1.4Jenkins_github联动](./分析/1.4Jenkins_github联动.md)
