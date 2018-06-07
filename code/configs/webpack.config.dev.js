@@ -3,19 +3,17 @@ import path from 'path';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
-const GLOBALS = {
-    'process.env.NODE_ENV': JSON.stringify('development')
-};
 export default {
     devtool: 'cheap-module-polyfill',
     entry: {  
-        vendor: [
-            'whatwg-fetch'
-        ],
+        // vendor: [
+        //     'whatwg-fetch'
+        // ],
         index: [
+            'whatwg-fetch',
             'babel-polyfill',
-            'eventsource-polyfill', // necessary for hot reloading with IE
-            'webpack-hot-middleware/client?reload=true',    // note that it reload the page it hot module reload    
+            // 'eventsource-polyfill', // necessary for hot reloading with IE
+            // 'webpack-hot-middleware/client?reload=true',    // note that it reload the page it hot module reload    
             './src/index'
         ]
     },
@@ -46,7 +44,7 @@ export default {
                 removeComments: true
             },
             hash: true,
-            chunks: ['vendor', 'index'],
+            chunks: 'index',
             filename: 'index.html',
             template: './src/index.html'
         })
@@ -61,11 +59,11 @@ export default {
             {
                 test: /\.(css)$/,
                 use: [
-                    'style-loader',
-                    
+                    'style-loader',                    
                         {
                             loader: 'css-loader',
                             options: {
+                                ident: "postcss-ident",
                                 sourceMap: true,
                                 importLoaders: 1,
                                 localIdentName: '[name].[local]',  // [name]__[local]--[hash:base64:5] -> name: module name, local: original name

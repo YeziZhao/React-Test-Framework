@@ -5,7 +5,7 @@ import {
     getLanguage
 } from '../utils';
 function getMessage() {
-    const dLang = 'ko_KR';
+    const dLang = 'zh_CN';
     const lang = getLanguage() || dLang;
     const messages = {
         ko_KR,

@@ -11,7 +11,7 @@ import {
     convert
 } from '../../services';
 const propTypes = {
-    version: PropTypes.object.isRequired,
+    version: PropTypes.object,
     applications: PropTypes.arrayOf(PropTypes.object).isRequired,
     handleChangeApplication: PropTypes.func.isRequired
 };

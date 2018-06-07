@@ -3,12 +3,11 @@
  * 2. 防止 iOS 横屏字号放大，同时保证在PC上 zoom 功能正常
  */
 html {
-  font-size: 62.5%; /* 1 */
-  -ms-text-size-adjust: 100%; /*2*/
-  -webkit-text-size-adjust: 100%; /*2*/
-  -moz-text-size-adjust: 100%;
-       text-size-adjust: 100%;/*2*/
-  
+    font-size: 62.5%; /* 1 */
+    -ms-text-size-adjust: 100%; /*2*/
+    -webkit-text-size-adjust: 100%; /*2*/
+    -moz-text-size-adjust: 100%;
+    text-size-adjust: 100%;/*2*/
 }
 /*
  * 1. dt 默认没边距

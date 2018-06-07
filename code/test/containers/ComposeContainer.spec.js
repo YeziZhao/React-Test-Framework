@@ -13,9 +13,6 @@ require("babel-polyfill");
 const store = configureStore();
 let wrapper ;
 
-
-
-
     describe('container test suite', () => {
 
         before("before hooks", function() {

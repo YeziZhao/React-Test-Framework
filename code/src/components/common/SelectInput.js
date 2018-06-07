@@ -49,7 +49,7 @@ const SelectInput = ({ id, name, value, defaultOption, options, onChange, readon
 SelectInput.propTypes = {
     id: PropTypes.string,
     name: PropTypes.string,
-    value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]).isRequired,
+    value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]),
     defaultOption: PropTypes.object,
     options: PropTypes.arrayOf(PropTypes.object),
     onChange: PropTypes.func.isRequired,

@@ -7,6 +7,8 @@ import { BrowserRouter, Route, Link } from 'react-router-dom';
 import routes from './routes';
 import { Provider } from 'react-redux';
 import configureStore from './store/configureStore';
+import 'react-datepicker/dist/react-datepicker-cssmodules.css';
+
 
 const store = configureStore();
 

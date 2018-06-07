@@ -1,0 +1,70 @@
+@import '../common/normalize.css';
+@import '../common/variables.css';
+@import '../common/table.css';
+@import '../common/search.css';
+@import '../common/container.css';
+@import './table';
+.tab {
+     border-bottom: 1px solid var(--grey-light);
+     margin: var(--margin-lg);
+     line-height: 33px;
+}
+.title {
+    border: 1px solid var(--grey-light);
+    padding: calc(1.6 * var(--padding-xs)) calc(3*var(--padding-md));
+    
+    color: var(--black-light);
+    font-size: var(--font-xs);
+}
+
+select {
+    height: 25px;
+    margin-right: 12px;
+    min-width: 50px;
+    border-radius: 5px;
+    border: 1px solid #999;
+}
+.queryTab{
+     margin: var(--margin-lg);
+    & > div {
+        display: inline-block;
+        min-width: 50px;
+        & input {
+            height: 23px;
+            padding-left: 4px;
+            border-radius: 5px;
+            border: 1px solid #999;
+        }
+   }
+}
+.submit {
+    display: inline-block;
+    margin-left: 12px;
+    padding: 0 10px ;
+    height: 24px;
+    line-height: 24px;
+    font-size: 12px;
+    color: #3a3a3a;
+    text-align: center;
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid #999;
+    cursor: pointer;
+}
+.istBox {
+     margin: var(--margin-lg);
+    position: relative;
+    & select {
+        position: absolute;
+        right: 0;
+    }
+    & span {
+        display: inline-block;
+    }
+    & b {
+        color: #f00;
+    }
+}
+.totalCount {
+    padding: 10px 0;
+}

@@ -12,6 +12,7 @@ export default {
     entry: {
         index: [
             'whatwg-fetch',
+            'babel-polyfill',
             './src/index'
         ]
     },
@@ -29,15 +30,81 @@ export default {
         new webpack.DefinePlugin(GLOBALS),
         new ExtractTextPlugin('[name].css'),
         new webpack.optimize.UglifyJsPlugin(),
+        // new HtmlWebpackPlugin({
+        //     title: 'notice list',
+        //     minify: {
+        //         collapseWhitespace: true,
+        //         removeComments: true
+        //     },
+        //     hash: true,
+        //     chunks: ['index'],
+        //     filename: 'index.html',
+        //     template: './src/index.html'
+        // }),
         new HtmlWebpackPlugin({
-            title: 'index',
+            title: 'notice list',
             minify: {
                 collapseWhitespace: true,
                 removeComments: true
             },
             hash: true,
             chunks: ['index'],
-            filename: 'index.html',
+            filename: '/ncs/kr/oneapp/notice/pc/list/index.html',
+            template: './src/index.html'
+        }),
+        new HtmlWebpackPlugin({
+            title: 'notice compose',
+            minify: {
+                collapseWhitespace: true,
+                removeComments: true
+            },
+            hash: true,
+            chunks: ['index'],
+            filename: '/ncs/kr/oneapp/notice/pc/compose/index.html',
+            template: './src/index.html'
+        }),
+        new HtmlWebpackPlugin({
+            title: 'update list',
+            minify: {
+                collapseWhitespace: true,
+                removeComments: true
+            },
+            hash: true,
+            chunks: ['index'],
+            filename: '/ncs/kr/oneapp/update/pc/list/index.html',
+            template: './src/index.html'
+        }),
+        new HtmlWebpackPlugin({
+            title: 'update compose',
+            minify: {
+                collapseWhitespace: true,
+                removeComments: true
+            },
+            hash: true,
+            chunks: ['index'],
+            filename: '/ncs/kr/oneapp/update/pc/compose/index.html',
+            template: './src/index.html'
+        }),
+        new HtmlWebpackPlugin({
+            title: 'all update list',
+            minify: {
+                collapseWhitespace: true,
+                removeComments: true
+            },
+            hash: true,
+            chunks: ['index'],
+            filename: '/ncs/all/oneapp/update/pc/list/index.html',
+            template: './src/index.html'
+        }),
+        new HtmlWebpackPlugin({
+            title: 'all update compose',
+            minify: {
+                collapseWhitespace: true,
+                removeComments: true
+            },
+            hash: true,
+            chunks: ['index'],
+            filename: '/ncs/all/oneapp/update/pc/compose/index.html',
             template: './src/index.html'
         })
     ],

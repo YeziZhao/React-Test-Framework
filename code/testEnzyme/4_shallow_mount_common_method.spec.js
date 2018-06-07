@@ -26,7 +26,9 @@ describe('shallow_mount_( find, findWhere, filter, filterWhere， at， childAt�
 
     //findWhere: 找到所有渲染树下满足函数内判断的节点
     it('shallow_mount_findWhere', () => {
-        expect(wrapper.findWhere( n =>  { return n.text() === 'odd1' || n.text() === 'odd3' }).length).to.be.equal(2);
+        wrapper.findWhere( ( n ) => {
+        });
+        expect(wrapper.findWhere( n =>  {  return  n.type() == 'li'  && (n.text() === 'odd1' || n.text() === 'odd3' )}).length).to.be.equal(2);
     });
 
     //filter:过滤，从wrapper中筛选出与参数中的selector匹配的节点

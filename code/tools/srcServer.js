@@ -11,7 +11,7 @@ const apiProxy = httpProxy.createProxyServer();
 
 /* eslint-disable no-console */
 
-const port = 3100;
+const port = 3001;
 const app = express();
 const compiler = webpack(config);
 

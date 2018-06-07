@@ -1,0 +1,103 @@
+.table {
+    width:100%;
+    thead {
+        tr {
+            th {
+                padding: 5px;
+                background: #e3e3e3;
+                border: 1px solid #999;
+                /*works th width*/
+                &.number {
+                    width: 6%;
+                }
+                &.title{
+                    width: 17%;
+                }
+                &.productType {
+                    width: 6%;
+                }
+                &.idcType {
+                    width: 6%;
+                }
+                &.acceptorLevel {
+                    width: 12%;
+                }
+                &.notiTime {
+                    width: 11%;
+                }
+                &.mbrId {
+                    width: 7%;
+                }
+                &.preview {
+                    width: 6%;
+                }
+                &.sendStatus {
+                    width: 20%;
+                }
+                /*ncs th width*/
+                &.ncsnumber {
+                    width: 8%;
+                }
+                &.ncstitle{
+                    width: 22%;
+                }
+                &.notiTime {
+                    width: 14%;
+                }
+                &.ncsmbrId {
+                    width: 10%;
+                }
+                &.ncspreview {
+                    width: 10%;
+                }
+                &.ncssendStatus {
+                    width: 20%;
+                }
+            }
+        }
+    }
+    tbody {
+        tr {
+            td {
+                border: 1px solid #999;
+                text-align: center;
+                padding: 5px;
+                max-width: 210px;
+                word-break: break-word;
+                span.handle {
+                    color: #15c;
+                    text-decoration: underline;
+                    cursor: pointer;
+                    margin-right: 4px;
+                    :last-child{
+                        margin-right: 0;
+                    }
+                }
+                p.amount {
+                    text-align: left;
+                    span {
+                        display: inline-block;
+                        color: $color-warning;
+                        text-decoration: underline;
+                        cursor: pointer;
+                    }
+                    span.successHistory,span.failedHistory {
+                        /*display: block;
+                        float: right;*/
+                        padding-left: 10px;
+                        color: rgba(131, 32, 5, .8);
+                    }
+                    .resendButton {
+                        margin: 0 0 0 5px;
+                    }
+                }
+                & .previewButton {
+                    color: #15c;
+                    cursor: pointer;
+                    text-decoration: underline;
+                }
+                
+            }
+        }
+    }
+}

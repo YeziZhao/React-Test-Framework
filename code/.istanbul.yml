@@ -1,5 +1,5 @@
 instrumentation:
-  root: F:\study_code\test-framework\  # 执行的根目录
+  root: .  # 执行的根目录
   extensions:
     - .js   # 检查覆盖率的文件扩张名
   excludes: ['**/node_modules/**']

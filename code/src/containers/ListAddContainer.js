@@ -27,7 +27,6 @@ class ListAdd extends React.Component {
       
         let temp = fromJS(this.state.datas).toJS();
         temp.push(item);
-        console.log(temp);
         this.setState((preState,props) => ({
             datas: temp
         }));

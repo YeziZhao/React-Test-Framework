@@ -77,26 +77,25 @@ class ComposeContainer extends React.Component {
         });
     }
     handleChangeInstallFile(e) {
-        const installFile = utils.fileToJs(e.target.files);
-        if (!installFile) {
-            e.preventDefault();
-        }
-        else {
+        var reader = new FileReader();
+        reader.onload =  (e) => {
+            let installFile = !e ? reader.result : e.target.result;
             this.props.actions.changeInstallFile({
                 installFile
             });
-        }
+        };
+        reader.readAsArrayBuffer(e.target.files[0]);
     }
     handleChangeVersionFile(e) {
-        const versionFile = utils.fileToJs(e.target.files);
-        if (!versionFile) {
-            e.preventDefault();
-        }
-        else {
+
+        var reader = new FileReader();
+        reader.onload =  (e) => {
+            let versionFile = !e ? reader.result : e.target.result;
             this.props.actions.changeVersionFile({
                 versionFile
             });
-        }
+        };
+        reader.readAsArrayBuffer(e.target.files[0]);
     }
     handleChangeDescription(e) {
         const description = e.target.value;
@@ -105,7 +104,6 @@ class ComposeContainer extends React.Component {
         });
     }
     handleClickUpload(e) {
-        // TODO: Validation of File
         this.props.actions.createVersion(this.props.version);
     }
     render() {

@@ -24,7 +24,6 @@ describe('reducers should return the new state after applying the action to the 
             services
         };
         const newState = serviceReducer(initState, action);
-        console.log(newState);
         expect(newState).to.be.deep.equal(services);
     });
 });
